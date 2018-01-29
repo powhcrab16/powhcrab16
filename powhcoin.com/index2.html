@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from powhcoin.com/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jan 2018 15:59:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>My Coins</title>
+    <meta name="description" content="Introducing the PonziCoin ICO, the world's first transparent, decentralized Ponzi Scheme built on the blockchain.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="shards.min.css">
+    <link rel="stylesheet" href="shards-extras.min.css">
+    <link rel="stylesheet" href="my.css">
+    <link href="static/css/main.c17080f1.css" rel="stylesheet">
+</head>
+
+<body class="shards-landing-page--1">
+    <div class="no-overlaywelcome d-flex justify-content-center flex-column" style="background:#487551">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark pt-3 px-0">
+                <a class="navbar-brand" href="index-2.html" style="margin-top:3px">
+                    <img src="images/agency-landing/logo.png" style="max-height:40px;margin-top:-10px" class="mr-2" alt="Shards - Agency Landing Page">
+                    <span style="font-weight:100">PoWH</span>Coin</span>
+					</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-2.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">My Coins
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+						<li class="nav-item">
+							<a class="nav-link" href="index3.html">Shill-Kit</a>
+						</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://etherscan.io/address/0xa7ca36f7273d4d38fc2aec5a454c497f86728a7a#code">Source</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.sec.gov/investor/alerts/ia_virtualcurrencies.pdf">White Paper</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <noscript>You need to enable JavaScript to run this app.</noscript>
+        </div>
+    </div>
+    <div id="root"></div>
+    <script>
+
+        /*
+        0. Open dev console (F12 on chrome and something similar in Firefox, locate the place you can write text into)
+
+        1. Starts manual contract interactions: (copy paste this and hit ENTER)
+        loadManualContractInteractior();
+
+        2. Run this to print your token balance:
+        ponziContract.balanceOf(web3.eth.accounts[0], function(err,x) {console.log(err,x.toString());});
+
+        3. Take that number, that's your actual token amount (fractions included), take a bite of it, make sure to send it in ""
+        -NO FRACTIONS, 12000313.3 = BAD, 12000313 = GOOD
+        -Sending it to the contract itself is considered selling and pays you eth
+        -replace first parameter with the relevant contract address in ""
+        run this to sell PART of tokens, in the example below I just retrieved half of 136:
+        ponziContract.transfer("contract address","amount of tokens to sell", function(err,x) {});
+        ponziContract.transfer("0xd8119f70ba04f85eb51f9101e867eda1d38c857c","68449162687378705", function(err,x) {});
+
+        4. Note: this is dumped into your dividends box, so withdraw that later, but it's
+        secure from price changes.
+
+        */
+        
+        const abi_ref =
+        
+[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOfOld","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"tokenCount","type":"uint256"}],"name":"withdraw","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"}],"name":"withdrawOld","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"sellPrice","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"ethervalue","type":"uint256"}],"name":"getTokensForEther","outputs":[{"name":"tokens","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"dividends","outputs":[{"name":"amount","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"sellMyTokensDaddy","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"buyPrice","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"getMeOutOfHere","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"fund","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"tokens","type":"uint256"}],"name":"getEtherForTokens","outputs":[{"name":"ethervalue","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"reserve","outputs":[{"name":"amount","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"}]
+;
+        const address_ref = '0xA7CA36F7273D4d38fc2aEC5A454C497F86728a7A';
+        const PonziContract = web3.eth.contract(abi_ref);
+        let ponziContract = null;
+
+        function loadManualContractInteractior() {
+            ponziContract = PonziContract.at(address_ref);
+
+        }
+
+
+
+    </script>
+    <script src="../code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/js/main.410976cc.js"></script>
+	<div class="container" style="margin-top:50px">
+		<h5>Instructions, for the Fools and Madmen who want in:</h5>
+		<p><li>First of all, install MetaMask <a href="https://metamask.io/">here</a> and put some Ether in it.</li></p>
+		<p><li>To buy PoWHCoins, simply click the "Buy PoWHCoins" button and enter the amount of Ether you want to convert to PoWHCoins, based on the current Buy Price. Press the "Yep" button twice (do not ignore the warning).
+		When confirming the transaction on MetaMask, be sure to use a high enough gas price so that the price doesn't change drastically while the transaction is in progress.
+		<a href="https://ethgasstation.info/">Here</a> you can view recommended gas prices.
+		Buying coins will increase both the Buy Price and Sell Price with 0.25% per bought coin once the transaction is complete.</li></p>
+		<p><li>Under "Balance" you can see how many PoWHCoins you currently own. "Shares Worth" tells you the total value of those coins, based on the current Sell Price. 
+		Note that when cashing out coins, the Buy Price and Sell Price drop afterwards, decreasing the value of your (and everyone else's) coins by 0.25% per coin.</li></p>
+		<p><li>Every time PoWHCoins are bought, a percentage of the fee from the bought coins will be divided under the current PoWHCoin holders (Dividends).</li></p>
+		<p><li>To cash out your coins, click the "Sell PoWHCoins" button. Here you can choose to either cash out your dividends or your PoWHCoins.
+		If you want to exchange your tokens for Ether, you first need to cash them out so that the Ether is added to your Dividends pool.</li></p>
+		<p><li>If you find yourself holding bags, please refer to the Shill-Kit page.</li></p>
+		<p><li><b>PLEASE SAVE THIS SOMEWHERE SAFE</b> If for any reason this website goes down, you can open up a Transaction through Metamask, Send 0 Ether with a 150k Gas Limit to the Contract and send "0xb1e35242" under additional data for a personal exit scheme. This is the getMeOutOfHere() function on the contract and will cash you out of all tokens and dividends. </li></p>
+	</div>
+</body>
+
+<!-- Mirrored from powhcoin.com/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jan 2018 15:59:36 GMT -->
+</html>
